@@ -1,0 +1,10 @@
+services:
+  edge:
+    container_name: edge
+    build:
+      context: .
+      dockerfile: Dockerfile
+    env_file:
+      - .env
+    ports:
+      - "3000:80"
